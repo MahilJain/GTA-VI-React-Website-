@@ -54,7 +54,7 @@ function App() {
             </mask>
           </defs>
           <image
-            href='./bg.jpeg'
+            href='./image.png'
             width="100%"
             height="100%"
             preserveAspectRatio="xMidYMid slice"
@@ -65,9 +65,10 @@ function App() {
       {showContent && (
         <div className="main w-full">
           <div className="landing w-full h-screen bg-black">
-            <div className='imagesdiv relative w-full h-screen'>
-              <img className = "absolute top-0 left-0 w-full h-full object-cover" src="./sky.jpeg" alt="" />
-              <img className = "absolute top-0 left-0 w-full h-full object-cover" src="./bg.jpeg" alt="" />
+            <div className='imagesdiv w-full h-screen'>
+              <img className = "absolute top-0 left-0 w-full h-full object-cover" src="./sky1.jpeg" alt="" />
+              <img className = "absolute top-0 left-0 w-full h-full object-cover" src="./image.png" alt="" />
+              <img className="absolute -bottom-[-5%] left-1/3 scale-[1.3]" src="./chr.png" alt="" style={{ width: '500px', height: 'auto' }} />
             </div>
           </div>
         </div>
