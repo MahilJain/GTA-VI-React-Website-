@@ -37,12 +37,14 @@ function App() {
 
     main?.addEventListener("mousemove", function (e) {
       const xMove = (e.clientX / window.innerWidth - 0.5) * 40;
-      gsap.to(".imagesdiv .text", {
-        x: `${xMove}%`
+      gsap.to(".main .text", {
+        x: `${xMove*.4}%`
+      })
+      gsap.to(".sky", {
+        x: xMove
       })
 
     })
-
   }, [showContent])
 
   return (
@@ -93,8 +95,8 @@ function App() {
             </div>
 
             <div className='imagesdiv relative overflow-hidden w-full h-screen'>
-              <img className="absolute top-0 left-0 w-full h-full object-cover" src="./sky1.png" alt="" />
-              <img className="absolute top-0 left-0 w-full h-full object-cover" src="./bg4.png" alt="" />
+              <img className="absolute sky scale-[1.2] top-0 left-0 w-full h-full object-cover" src="./sky1.png" alt="" />
+              <img className="absolute bg scale-[1.5] top-0 left-0 w-full h-full objectFit-cover" src="./bg4.png" alt="" />
 
               <div className="text text-white flex flex-col gap-3 absolute top-20 left-1/2 -translate-x-1/2 scale-[1.4] rotate-[-10deg]">
                 <h1 className="text-[9rem] leading-none -ml-40">grand</h1>
@@ -102,7 +104,7 @@ function App() {
                 <h1 className="text-[9rem] leading-none -ml-40">auto</h1>
               </div>
 
-              <img className="absolute -bottom-[-2%] left-1/2 -translate-x-1/2 scale-[1.3]" src="./chr.png" alt="" style={{ width: '500px', height: 'auto' }} />
+              <img className="absolute character -bottom-[-2%] left-1/2 -translate-x-1/2 scale-[1.3]" src="./chr.png" alt="" style={{ width: '500px', height: 'auto' }} />
 
 
             </div>
